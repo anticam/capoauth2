@@ -1,0 +1,23 @@
+# ### Get Access Token (CF using Client Credentials grant type
+# @name requestAccessToken
+POST {{$dotenv authurl}}/oauth/token
+Content-Type: application/x-www-form-urlencoded
+
+grant_type=client_credentials
+&client_id={{$dotenv clientid}}
+&client_secret={{$dotenv clientsecret}}
+&response_type=token
+
+### Fill Variables from Response
+@access_token = {{requestAccessToken.response.body.$.access_token}}
+
+### Read metadata
+GET {{$dotenv srvurl}}/odata/v4/admin
+Accept: application/json
+Authorization: Bearer {{access_token}}}
+
+
+### Read metadata
+GET {{$dotenv srvurl}}/odata/v4/admin/$metadata
+Accept: application/json
+Authorization: Bearer {{access_token}}}
