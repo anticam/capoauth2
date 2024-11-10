@@ -11,11 +11,6 @@ grant_type=client_credentials
 ### Fill Variables from Response
 @access_token = {{requestAccessToken.response.body.$.access_token}}
 
-### Read metadata
-GET {{$dotenv srvurl}}/odata/v4/admin
-Accept: application/json
-Authorization: Bearer {{access_token}}}
-
 
 ### Read metadata
 GET {{$dotenv srvurl}}/odata/v4/admin/$metadata

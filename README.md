@@ -6,7 +6,7 @@ It contains these folders and files, following our recommended project layout:
 
 File or Folder | Purpose
 ---------|----------
-`app/` | content for UI frontends goes here
+`app/` | content for UI frontend goes here
 `db/` | your domain models and data go here
 `srv/` | your service models and code go here
 `package.json` | project metadata and configuration
@@ -33,7 +33,7 @@ login to CF space
 cf login -a https://api.cf.us10-001.hana.ondemand.com --sso
 ```
 
-create and show service key
+create and show service key for the xsuaa service instance:
 
 ```shell
 
@@ -44,10 +44,10 @@ cf service-key capoauth2-auth capoauth2-auth-sk
 {
   "credentials": {
     "apiurl": "https://api.authentication.us10.hana.ondemand.com",
-    "clientid": "sb-capoauth2-c73260a3trial-dev!t342080",
+    "clientid": "sb-capoaunnnnnnnnnnnntrial-dev!t342080",
     "clientsecret": "PkE0nnnnnnnnnnnnnnnnnnnR5c=",
     "credential-type": "instance-secret",
-    "identityzone": "c73260a3trial",
+    "identityzone": "c7326nnnnnnnn",
     "identityzoneid": "32c86c6c-nnnn-nnnn-nnnn-4bc0fcc55b1a",
     "sburl": "https://internal-xsuaa.authentication.us10.hana.ondemand.com",
     "serviceInstanceId": "32c86c6c-nnnn-nnnn-nnnn-4bc0fcc55b1a",
@@ -55,9 +55,9 @@ cf service-key capoauth2-auth capoauth2-auth-sk
     "tenantid": "32c86c6c-nnnn-nnnn-nnnn-4bc0fcc55b1a",
     "tenantmode": "dedicated",
     "uaadomain": "authentication.us10.hana.ondemand.com",
-    "url": "https://c73260a3trial.authentication.us10.hana.ondemand.com",
+    "url": "https://c7326nnnnnnnn.authentication.us10.hana.ondemand.com",
     "verificationkey": "-----BEGIN PUBLIC KEY-----\nMIIBIjANB...VcQ+WQiZc\nKQIDAQAB\n-----END PUBLIC KEY-----",
-    "xsappname": "capoauth2-c73260a3trial-dev!t342080",
+    "xsappname": "capoauth2-cnnnnnnnnnnnnnnnnn!t342080",
     "zoneid": "32c86c6c-nnnn-nnnn-nnnn-4bc0fcc55b1a"
   }
 }
@@ -69,10 +69,12 @@ in .env file store the clientid, clientsecret, url and application URL:
 
 clientid=sb-capoauth2-c73260a3trial-dev!t342080
 clientsecret=PkE0nnnnnnnnnnnnnnnnnnnR5c=
-authurl=https://c73260a3trial.authentication.us10.hana.ondemand.com
-srvurl=https://c73260a3trial-dev-capoauth2-srv.cfapps.us10-001.hana.ondemand.com
+authurl=https://c7326nnnnnnnn.authentication.us10.hana.ondemand.com
+srvurl=https://c7326nnnnnnnn-dev-nnnnnnnnn-srv.cfapps.us10-001.hana.ondemand.com
 
 ```
+
+from test.http run `Get Access Token` then `Read metadata` scripts.
 
 login to BTP
 
@@ -85,26 +87,23 @@ list security details:
 
 ```shell
 
-❯ btp get security/app cf-application!t342080 --subaccount 32c86c6c-nnnn-nnnn-nnnn-nnnnnnn55b1a
-appid: cf-application!t342080
-xsappname: cf-application
+appid: capoauth2-c73260a3trial-dev!t342080
+xsappname: capoauth2-c73260a3trial-dev
 planName: application
 description: <null>
 orgId: <null>
 spaceId: <null>
 userName: <null>
-planId: ThGdx5loQ6XhvcdY6dLlEXcTgQD7641pDKXJfzwYGLg=
-serviceinstanceid: dc892363-b5a1-nnnn-nnnn-nnnnnnnn804f
+planId: ThGdx5lxxxxxxxxxxxxxxxxxQD7641pDKXJfzwYGLg=
+serviceinstanceid: 3eadc2a6-xxxx-xxxx-xxxx-fcfb7589462c
 masterAppId: <null>
 tenant-mode: <null>
 scopes:
-  - description: Change grant type Excercise - Scope 1
-    name: cf-application!t342080.Excercise_User_Scope_1
-  - description: Change grant type Excercise - Scope 1
-    name: cf-application!t342080.Excercise_System_Scope_1
+  - description: admin
+    name: capoauth2-c73260a3trial-dev!t342080.admin
 foreign-scope-references: <null>
 authorities:
-  - cf-application!t342080.Excercise_System_Scope_1
+  - capoauth2-c73260a3trial-dev!t342080.admin
 attributes:
 
 role-templates: <null>
