@@ -126,3 +126,9 @@ OK
 - Granting Scopes to Another Application  
 - authorities  
 - oauth2-configuration  
+
+Blog 2022 - [How grant-types keep your application secure - lab setup](https://community.sap.com/t5/technology-blogs-by-sap/how-grant-types-keep-your-application-secure-lab-setup/ba-p/13525346)  
+Blog 2022 - [How grant-types keep your application secure?](https://community.sap.com/t5/technology-blogs-by-sap/how-grant-types-keep-your-application-secure/ba-p/13523970)  
+- [How grant-types keep your application secure – Exercise 1](https://community.sap.com/t5/technology-blogs-by-sap/how-grant-types-keep-your-application-secure-exercise-1/ba-p/13525435)  
+- [How grant-types keep your application secure – Exercise 2](https://community.sap.com/t5/technology-blogs-by-sap/how-grant-types-keep-your-application-secure-exercise-2/ba-p/13525481)  
+- [How grant-types keep your application secure – Exercise 3](https://community.sap.com/t5/technology-blogs-by-sap/how-grant-types-keep-your-application-secure-exercise-3/ba-p/13525513)  
