@@ -87,6 +87,7 @@ list security details:
 
 ```shell
 
+❯ btp get security/app capoauth2-c73260a3trial-dev!t342080 --subaccount 32c86c6c-xxxx-xxxx-xxxx-4bc0fcc55b1a
 appid: capoauth2-c73260a3trial-dev!t342080
 xsappname: capoauth2-c73260a3trial-dev
 planName: application
